@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+.login{
+  margin: 50px 350px;
+  vertical-align: middle;
+}
+.float-right{
+  float: right;
+}
