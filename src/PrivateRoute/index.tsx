@@ -1,9 +1,11 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import {
-  Redirect, Route,
-  RouteComponentProps, RouteProps
+  Route,
+  RouteProps,
+  Redirect,
+  RouteComponentProps,
 } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 interface ReduxProps {
   isAuthenticated: boolean;
@@ -12,16 +14,16 @@ interface Props extends ReduxProps, RouteProps {
   component: React.ComponentType<RouteComponentProps>;
 }
 
-function HomeRoute(props: Props) {
+function PrivateRoute(props: Props) {
   const { location } = props;
   const { isAuthenticated, component: Component, ...rest } = props;
   return (
     <Route
       {...rest}
-      render={(props) => {
-        if (!isAuthenticated && !localStorage.getItem("token")) {
+      render={props => {
+        if (!isAuthenticated) {
           return (
-            <Redirect to={{ pathname: "/login", state: { from: location } }} />
+            <Redirect to={{ pathname: '/login', state: { from: location } }} />
           );
         }
         return <Component {...props} />;
@@ -31,9 +33,9 @@ function HomeRoute(props: Props) {
 }
 
 const mapStateToProps = (state: any) => ({
-  isAuthenticated: state.home.isAuthenticated,
+  isAuthenticated: state.homeReducers.isAuthenticated,
 });
 
 const mapDispatchToProps = {};
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeRoute);
+export default connect(mapStateToProps, mapDispatchToProps)(PrivateRoute);
