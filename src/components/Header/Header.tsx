@@ -12,7 +12,6 @@ const Header = (props: Props) => {
   const onSubmit = (event: FormEvent) => {
     event.preventDefault();
     dispatch(logout());
-    localStorage.removeItem('token');
   };
   return (
     <div className="navbar navbar-default">

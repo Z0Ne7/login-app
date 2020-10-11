@@ -28,9 +28,9 @@ const Login = (props: Props) => {
   };
 
   useEffect(() => {
-    const isAuth = props.Login.token;
+    const token = props.Login.token;
 
-    if (isAuth && isAuthenticated) {
+    if (token && isAuthenticated) {
       history.push('/');
     } else {
       history.push('/login');
