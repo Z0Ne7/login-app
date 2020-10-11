@@ -17,7 +17,6 @@ const loginReducer = (state = initialState, action: any) =>
         draft.password = action.data.password;
         break;
       case types.LOGIN_SUCCESS:
-        console.log(action);
         draft.loading = false;
         draft.token = action.data;
         break;
