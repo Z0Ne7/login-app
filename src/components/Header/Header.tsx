@@ -2,13 +2,13 @@ import React, { FormEvent } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-
 interface Props {
   logout?: any;
 }
 const Header = (props: Props) => {
   const { logout } = props;
   const dispatch = useDispatch();
+
   const onSubmit = (event: FormEvent) => {
     event.preventDefault();
     dispatch(logout());
@@ -25,7 +25,7 @@ const Header = (props: Props) => {
         </li>
       </ul>
       <form onSubmit={onSubmit}>
-        <button type="button" className="btn btn-danger float-right">
+        <button type="submit" className="btn btn-danger float-right">
           Đăng xuất
         </button>
       </form>

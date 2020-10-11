@@ -35,8 +35,7 @@ const Login = (props: Props) => {
     } else {
       history.push('/login');
     }
-  }, [isAuthenticated]);
-
+  }, [history, isAuthenticated, props.Login.token]);
 
   return (
     <div className="panel panel-primary login">

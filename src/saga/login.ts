@@ -9,12 +9,8 @@ export function* loginSaga(action: any) {
     const data = yield call(axios.request, {
       url: API_URL,
       method: 'GET',
-      data: {
-        username: action.data.username,
-        password: action.data.password,
-      }
     })
-    if (data.data[0].username) {
+    if (action.data.username === data.data[0].username && action.data.password === data.data[0].password) {
       localStorage.setItem('token', data.data[0].token);
       yield put(loginSuccess(data.data[0].token));
     }

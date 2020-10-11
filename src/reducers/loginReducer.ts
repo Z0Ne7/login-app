@@ -5,7 +5,7 @@ const initialState = {
   loading: false,
   username: null,
   password: null,
-  token: "",
+  token: '',
 };
 
 const loginReducer = (state = initialState, action: any) =>
@@ -17,8 +17,9 @@ const loginReducer = (state = initialState, action: any) =>
         draft.password = action.data.password;
         break;
       case types.LOGIN_SUCCESS:
+        console.log(action);
         draft.loading = false;
-        draft.token = 'Token';
+        draft.token = action.data;
         break;
       case types.LOGIN_FAIL:
         draft.loading = false;
