@@ -1,4 +1,4 @@
-import * as types from '../constants/ActionTypes';
+import * as types from '../constants/actionTypes';
 
 export const requestLogin = (username: string, password: string) => {
   return {

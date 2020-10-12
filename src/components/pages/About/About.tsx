@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './../../components/Header/Header';
-import { logout } from '../../actions/home';
+import { Header } from '../..';
+import { logout } from '../../../actions/home';
 
 function About() {
   return (

@@ -1,8 +1,8 @@
 import { takeLatest, call, put } from 'redux-saga/effects';
 import axios from 'axios';
 import { loginSuccess, loginFail } from '../actions/login';
-import * as types from '../constants/ActionTypes';
-import { API_URL } from '../constants/config';
+import * as types from '../constants/actionTypes';
+import { API_URL } from '../constants/serviceTypes';
 
 export function* loginSaga(action: any) {
   try {

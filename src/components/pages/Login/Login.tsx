@@ -1,6 +1,6 @@
 import React, { useState, useEffect, FormEvent } from 'react';
 import { connect, useDispatch } from 'react-redux';
-import { requestLogin } from '../../actions/login';
+import { requestLogin } from '../../../actions/login';
 import { useHistory } from 'react-router-dom';
 
 interface Props {
@@ -76,4 +76,5 @@ const mapStateToProps = (state: any) => {
 };
 
 const mapDispatchToProps = {};
+
 export default connect(mapStateToProps, mapDispatchToProps)(Login);

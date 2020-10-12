@@ -1,5 +1,5 @@
-import * as types from "../constants/ActionTypes";
-import produce from "immer";
+import * as types from '../constants/actionTypes';
+import produce from 'immer';
 
 const initialState = {
   loading: false,
@@ -9,7 +9,7 @@ const initialState = {
 };
 
 const loginReducer = (state = initialState, action: any) =>
-  produce(state, (draft) => {
+  produce(state, draft => {
     switch (action.type) {
       case types.REQUEST_LOGIN:
         draft.loading = true;
