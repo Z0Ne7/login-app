@@ -1,5 +1,5 @@
-import * as types from '../constants/actionTypes';
+import { ACTION } from '../constants/actionTypes';
 
 export const logout = () => ({
-  type: types.LOGOUT
-})
+  type: ACTION.LOGOUT,
+});

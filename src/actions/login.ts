@@ -1,24 +1,24 @@
-import * as types from '../constants/actionTypes';
+import { ACTION } from '../constants/actionTypes';
 
 export const requestLogin = (username: string, password: string) => {
   return {
-    type: types.REQUEST_LOGIN,
+    type: ACTION.REQUEST_LOGIN,
     data: {
       username,
       password,
     },
   };
-}
+};
 export const loginSuccess = (data: any) => {
   return {
-    type: types.LOGIN_SUCCESS,
+    type: ACTION.LOGIN_SUCCESS,
     data,
   };
-}
+};
 
 export const loginFail = (data: any) => {
   return {
-    type: types.LOGIN_FAIL,
+    type: ACTION.LOGIN_FAIL,
     data,
   };
-}
+};

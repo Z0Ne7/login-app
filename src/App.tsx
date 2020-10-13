@@ -1,8 +1,8 @@
 import React from 'react';
-import './App.css';
+import './styles/App.css';
 import { About, Home, Login } from './components/pages';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import PrivateRoute from './PrivateRoute';
+import PrivateRoute from './routes';
 
 function App() {
   return (

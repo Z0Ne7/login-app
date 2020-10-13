@@ -1,1 +1,1 @@
-export { default as coreServices } from './coreServices';
+export { default as callApi } from './coreServices';
