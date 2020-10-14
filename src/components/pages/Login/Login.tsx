@@ -1,6 +1,6 @@
 import React, { useState, useEffect, FormEvent } from 'react';
 import { connect, useDispatch } from 'react-redux';
-import { loginSuccess, requestLogin } from '../../../actions/login';
+import { requestLogin } from '../../../actions/login';
 import { useHistory } from 'react-router-dom';
 
 interface Props {
@@ -39,9 +39,9 @@ const Login = (props: Props) => {
   useEffect(() => {
     const localToken = localStorage.getItem('token');
     if (localToken) {
-      dispatch(loginSuccess(localToken));
+      history.push('/');
     }
-  }, [dispatch, history]);
+  }, [history]);
 
   return (
     <div className="panel panel-primary login">
