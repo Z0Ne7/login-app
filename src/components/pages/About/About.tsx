@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header } from '../..';
+import { Header } from '../../layouts';
 import { logout } from '../../../actions/home';
 
 function About() {

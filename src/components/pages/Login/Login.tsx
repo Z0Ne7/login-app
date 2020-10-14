@@ -6,7 +6,7 @@ import { useHistory } from 'react-router-dom';
 interface Props {
   isAuthenticated: boolean;
   history: any;
-  Login: any;
+  token: any;
 }
 
 const Login = (props: Props) => {
@@ -28,14 +28,13 @@ const Login = (props: Props) => {
   };
 
   useEffect(() => {
-    const token = props.Login.token;
-
+    const token = props.token;
     if (token && isAuthenticated) {
       history.push('/');
     } else {
       history.push('/login');
     }
-  }, [history, isAuthenticated, props.Login.token]);
+  }, [history, isAuthenticated, props.token]);
 
   return (
     <div className="panel panel-primary login">
@@ -70,7 +69,7 @@ const Login = (props: Props) => {
 };
 const mapStateToProps = (state: any) => {
   return {
-    Login: state.loginReducer,
+    token: state.loginReducer.token,
     isAuthenticated: state.homeReducers.isAuthenticated,
   };
 };
