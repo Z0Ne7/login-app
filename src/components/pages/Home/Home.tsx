@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header } from '../../layouts';
-import { logout } from '../../../actions/home';
+import { logout } from '../../../actions';
 
 const Home = () => {
   return (

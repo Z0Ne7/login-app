@@ -1,6 +1,6 @@
 import React, { useState, useEffect, FormEvent } from 'react';
 import { connect, useDispatch } from 'react-redux';
-import { requestLogin } from '../../../actions/login';
+import { requestLogin } from '../../../actions';
 import { useHistory } from 'react-router-dom';
 
 interface Props {
