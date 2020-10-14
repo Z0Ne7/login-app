@@ -10,13 +10,9 @@ function App() {
       <Router>
         <React.Fragment>
           <Switch>
-            <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <Route path="/login" exact component={Login} />
-                <PrivateRoute path="/about" exact component={About} />
-                <PrivateRoute path="/" exact component={Home} />
-              </div>
-            </div>
+            <Route path="/login" exact component={Login} />
+            <PrivateRoute path="/about" exact component={About} />
+            <PrivateRoute path="/" exact component={Home} />
           </Switch>
         </React.Fragment>
       </Router>

@@ -1,6 +1,6 @@
-import React, { FormEvent } from 'react';
+import React, { FormEvent, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 interface Props {
   logout?: any;
@@ -13,6 +13,13 @@ const Header = (props: Props) => {
     event.preventDefault();
     dispatch(logout());
   };
+  const history = useHistory();
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      history.push('/login');
+    }
+  }, [history]);
   return (
     <div className="navbar navbar-default">
       <ul className="nav navbar-nav">
