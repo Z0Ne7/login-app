@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import { Button } from '../..';
 
-let container;
+let container : any;
 
 beforeEach(() => {
   container = document.createElement('div');
