@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import { Button } from '../../../common';
+import { Button } from '../..';
 
 let container;
 
