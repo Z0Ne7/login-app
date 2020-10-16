@@ -8,13 +8,11 @@ function App() {
   return (
     <div className="container">
       <Router>
-        <React.Fragment>
-          <Switch>
-            <Route path="/login" exact component={Login} />
-            <PrivateRoute path="/about" exact component={About} />
-            <PrivateRoute path="/" exact component={Home} />
-          </Switch>
-        </React.Fragment>
+        <Switch>
+          <Route path="/login" exact component={Login} />
+          <PrivateRoute path="/about" exact component={About} />
+          <PrivateRoute path="/" exact component={Home} />
+        </Switch>
       </Router>
     </div>
   );

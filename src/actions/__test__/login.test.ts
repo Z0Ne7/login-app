@@ -1,4 +1,4 @@
-import { loginSuccess, requestLogin, loginFail } from '../../actions';
+import { loginSuccess, requestLogin, loginFail } from '..';
 import { ACTION } from '../../constants/actionTypes';
 
 describe('actions', () => {
