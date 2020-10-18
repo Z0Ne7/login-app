@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from '../../layouts';
 import { logout } from '../../../actions';
-import { Button } from '../../common';
+import { ConfirmButton } from '../../common/Button';
 
 function About() {
   return (
@@ -11,7 +11,7 @@ function About() {
         <div className="row">
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <h1>About</h1>
-            <Button />
+            <ConfirmButton />
           </div>
         </div>
       </div>

@@ -1,6 +1,8 @@
 import React, { FormEvent } from 'react';
 import { useDispatch } from 'react-redux';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import { LogoutButton } from '../../common/Button';
+import { MainNavbar } from '../../common/Navbar';
 
 interface Props {
   logout?: any;
@@ -17,18 +19,9 @@ const Header = (props: Props) => {
   const history = useHistory();
   return (
     <div className="navbar navbar-default">
-      <ul className="nav navbar-nav">
-        <li className="active">
-          <Link to="/">Trang chủ</Link>
-        </li>
-        <li>
-          <Link to="/about">Liên hệ</Link>
-        </li>
-      </ul>
+      <MainNavbar />
       <form onSubmit={onSubmit}>
-        <button type="submit" className="btn btn-danger float-right">
-          Đăng xuất
-        </button>
+        <LogoutButton />
       </form>
     </div>
   );

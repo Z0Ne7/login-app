@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import { Button } from '../..';
+import { ConfirmButton } from '../../Button';
 
 let container : any;
 
@@ -18,7 +18,7 @@ afterEach(() => {
 describe('Button component', () => {
   test('it shows the expected text when clicked', () => {
     act(() => {
-      ReactDOM.render(<Button />, container);
+      ReactDOM.render(<ConfirmButton />, container);
     });
     const button = container.getElementsByTagName('button')[0];
     expect(button.textContent).toBe('CLICK TO CONFIRM');
