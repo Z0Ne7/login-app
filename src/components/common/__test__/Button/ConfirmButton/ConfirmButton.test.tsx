@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import { ConfirmButton } from '../../Button';
+import { ConfirmButton } from '../../../Button';
 
 let container : any;
 
